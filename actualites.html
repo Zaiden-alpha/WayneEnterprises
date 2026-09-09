@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>WayneTech - Actu</title>
+</head>
+<body>
+     <header>
+
+        <div class="banner-wrap">
+            <img src="img/Bannière .png" alt="banniere WayneTech" class="top-banner">
+            <!--alerte baniere >Wayne Enterprises Secure-Network // Status: Operational (je sais pas encore comment on fais ça)-->
+        </div>
+
+    </header>
+
+
+    <nav>
+        <ul>
+            <li>
+
+                <a href="index.html">Accueil</a>
+
+            </li>
+
+            <li>
+                <a href="a-propos.html">A propos</a>
+
+            </li>
+
+            <li>
+                <a href="actualites.html">Actu</a>
+
+            </li>
+
+            <li>
+                <a href="faq.html">FAQ</a>
+
+            </li>
+
+            <li>
+
+                <a href="recrutement.html">Nous embauchons</a>
+
+            </li>
+
+            <li class="dropdown">
+
+                AeroSpace
+                    <ul>
+                        <li>
+
+                            <a href="aerospace/aeromat-A-01.html">Aeromat-A-01</a>
+                            
+                        </li>
+
+                        <li>
+
+                            <a href="aerospace/falcon-G-01.html">Falcon-G-01</a>
+
+                        </li>
+                       
+                        <li>
+
+                            <a href="aerospace/hexa-C6-412.html">Hexa-C6-412</a>
+
+                        </li>
+
+                    </ul>
+                
+            </li>
+
+            <li class="dropdown">
+                Mobility
+                    <ul>
+                        <li>
+
+                            <a href="mobility/warden.html">Warden</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="mobility/jet-wt.html">Jet-WT</a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="mobility/viper.html">Viper</a>
+
+                        </li>
+
+                    </ul>
+
+            
+
+            </li>
+
+            <li class="dropdown">
+                Biotech
+                    <ul>
+
+                        <li>
+
+                            <a href="biotech/exo-tisssu.html">Exo-Tissu</a>
+
+                        </li>
+
+                         <li>
+
+                            <a href="biotech/stride.html">Stride</a>
+                            
+                        </li>
+
+                    </ul>
+                
+            </li>
+
+            <li class="dropdown">
+                Secure-Link
+                    <ul>
+
+                        <li>
+
+                           <a href="securelink/aegis-17.html">Aegis-17</a> 
+
+                        </li>
+
+                    </ul>
+
+            </li>
+
+            <li class="dropdown">
+                CivilTech
+                    <ul>
+
+                        <li>
+                            <a href="civiltech/laptop.html">Laptop Study Book</a>
+
+                        </li>
+
+                          <li>
+
+                            <a href="civiltech/nest.html">Nest Assistant</a>
+
+                        </li>
+
+                         <li>
+
+                            <a href="civiltech/beacon.html">Beacon Compact </a>
+                            
+                        </li>
+
+                    </ul>
+            </li>
+
+            <li>
+
+                <a href="contact.html">Contact</a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+        <section class="news-carousel">
+
+            <h2 class="divisions-title">Derniers projets</h2>
+
+            <div class="carousel-wrapper">
+
+                <div class="carousel-track" id="carouselTrack">
+
+                    <div class="carousel-slide" style="background-image: url('img/falcon.png')">
+
+                        <div class="slide-caption">
+
+                            <h3>Falcon-G-01</h3>
+
+                            <p>Reconnaissance aérienne nouvelle génération.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-slide" style="background-image: url('img/viper.jpg')">
+
+                        <div class="slide-caption">
+
+                            <h3>Viper</h3>
+
+                            <p>Mobilité rapide pour intervention tout-terrain</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-slide" style="background-image: url('img/drone-C-X450.jpg')">
+
+                        <div class="slide-caption">
+
+                            <h3>Aeromat-A-01</h3>
+
+                            <p>Drone tactique tactique surveillance et intervention à distance.</p>
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="carousel-slide carousel-divider">
+
+                        <h2>CivilTech</h2>
+
+                        <p>Des technologies pour le quotidien.</p>
+
+                    </div>
+
+                    <div class="carousel-slide" style="background-image: url('img/laptop.jpg')">
+
+                        <div class="slide-caption">
+
+                            <h3>Laptop Study Book</h3>
+
+                            <p>L'apprentissage accèssible à tous.</p> 
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="carousel-slide" style="background-image: url('img/beacon.jpg')">
+
+                        <div class="slide-caption">
+
+                            <h3>Beacon Compact</h3>
+
+                            <p>La sécurité personnelle et discrete à emporter partout</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-slide" style="background-image: url('img/nest.jpg')">
+                        
+                        <div class="slide-caption">
+
+                            <h3>Nest Home</h3>
+
+                            <p>L'assistance artificielle pour la maison.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-arrow prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-arrow next" onclick="moveCarousel(1)">&#10095;</button>
+
+                <div class="carousel-dots" id="carouselDots"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>&copy; 2026 Wayne Enterprises, Inc. All Rights Reserved.</p>
+        <p>Advancing the Future of Mobility & Security</p>
+        <a href="rgpd.html">RGPD</a>
+
+    </footer>
+    
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

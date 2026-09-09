@@ -1,0 +1,115 @@
+Pour Bruce
+
+Bruce Wayne (ajouter bruceWayne.png)
+PDG de Wayne Enterprises
+Philanthrope
+Héritier de la famille Wayne
+Engagé dans les initiatives technologiques et sociales de l'Enterprises
+
+
+Pour Lucius
+
+Lucius Fox (ajouter luciusFox.png)
+Directeur technique / responsable des technologies
+Ingénieur et inventeur
+Supervise la recherche et le développement
+Figure centrale dans les innovations de WayneTech
+
+pour le css je veux 
+
+🎨 LA PALETTE DE COULEURS WAYNETECH
+
+    Fond principal (La Bat-cave) : Noir très profond (#0B0E14 ou #000000).
+
+    Fond des cartes & blocs (L'Acier) : Gris anthracite foncé (#161B22 ou #1E2430).
+
+    Couleur d'accent (La touche WayneTech) : Violet néon / électrique (#8A2BE2 ou #9D4EDD).
+
+    Textes principaux : Blanc pur (#FFFFFF) pour les titres, Gris clair (#C9D1D9) pour la lecture.
+
+    Bordures & Lignes : Gris métallique discret (#30363D).
+
+    📐 LA STRUCTURE DE LA PAGE D'ACCUEIL
+
++-------------------------------------------------------------------+
+|                           1. BANDEAU DE TOP                       |
++-------------------------------------------------------------------+
+|                           2. BARRE DE NAV                         |
++---------------------------------------------------+---------------+
+|                                                   |               |
+|  3. GRAND BANNER "INNOVATING FOR A SAFER..."      |               |
+|                                                   |  5. COLONNE   |
++---------------------------------------------------+     DROITE    |
+|                                                   |    (BRUCE)    |
+|  4. GRILLE DES 4 DIVISIONS (2x2)                  |               |
+|                                                   |               |
++---------------------------------------------------+               |
+|                                                   |               |
+|  6. SECTION LABO R&D (IMAGE + DÉTAILS)            |               |
+|                                                   |               |
++---------------------------------------------------+---------------+
+|                           7. PIED DE PAGE                         |
++-------------------------------------------------------------------+
+
+🧩 DÉTAIL EN DÉCORDAGE DES BLOCS
+1. Le Haut de Page (Header & Nav)
+
+    Bandeau tout en haut : Fond noir pur, petit texte gris foncé centré "Wayne Enterprises Secure-Network // Status: Operational" avec un tout petit point vert lumineux à côté.
+
+    Barre de Navigation :
+
+        À gauche : Logo Wayne Enterprises (gris acier lumineux).
+
+        À droite : Les liens du menu alignés horizontalement. Couleur grise au repos, qui devient violette lumineuse quand la souris passe dessus.
+
+2. Le Contenu Principal (Au centre / à gauche)
+
+    Grand Banner Hero :
+
+        Fond très sombre avec un léger dégradé violet subtil au fond.
+
+        Titre XXL en blanc ("INNOVATING FOR A SAFER TOMORROW").
+
+        Bouton d'action : Fond violet néon, texte blanc, coins légèrement biseautés ou droits (style militaire/industriel).
+
+    Grille des Divisions (4 cartes) :
+
+        Présentées sur 2 colonnes et 2 lignes.
+
+        Chaque carte a un fond gris anthracite avec une très fine bordure gris métallique.
+
+        Quand on survole une carte avec la souris : la bordure devient violette et la carte s'élève très légèrement.
+
+    Section Labo R&D :
+
+        À gauche : La grande photo du laboratoire holographique qu'on a générée.
+
+        À droite : Les 3 sous-points (Fusion, Composites, Cyber-sécurité) sous forme de petites puces stylisées avec des icônes violettes.
+
+3. La Colonne Droite (La carte Bruce Wayne)
+
+    Placement : Calée tout à droite, occupant environ 25 à 30% de la largeur de l'écran.
+
+    Apparence :
+
+        Fond gris anthracite un peu plus clair que le fond de la page pour bien la détacher.
+
+        Une bordure à gauche de couleur violette (une ligne verticale fine).
+
+    Contenu de haut en bas :
+
+        Photo de portrait de Bruce Wayne (format carré ou rond avec un contour violet fin).
+
+        Nom "Bruce Wayne" en gros et blanc, en dessous "PDG & Fondateur" en gris clair.
+
+        Une ligne de séparation horizontale fine.
+
+        La citation ("Notre mission est...") écrite en italique et légèrement plus petite.
+
+4. Le Pied de Page (Footer)
+
+    Fond : Noir absolu.
+
+    Bordure haute : Ligne fine violette pour fermer la page en beauté.
+
+    Contenu : Textes centrés, petit copyright en gris foncé, et le slogan "Advancing the Future of Mobility & Security" écrit en majuscules avec un écartement important entre les lettres pour faire très "luxe/corporate".
