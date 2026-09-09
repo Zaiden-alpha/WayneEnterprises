@@ -486,12 +486,115 @@ footer{
     gap: 30px ;
 }
 
-/*Responsive*/
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
+
+    /*NAVIGATION*/
     nav > ul{
         flex-direction: column;
         gap: 10px;
     }
+
+    .dropdown ul{
+        position: static;
+        display: block;
+        width: 100%;
+        left: 0;
+    }
+
+    /*HERO*/
+    .hero{
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .hero-title{
+        font-size: 28px;
+    }
+
+    .hero-text{
+        font-size: 18px;
+    }
+
+    /*PRESENTATION*/
+    .presentation{
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /*MAIN LAYOUT (accueil : hero/divisions/labo + sidebar)*/
+    .main-layout{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        border-left: none;
+        border-top: 1px solid #333;
+        padding-left: 0;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+
+    /*DIVISIONS EN GRILLE*/
+    .divisions-grid,
+    .values-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /*RECHERCHE & DEVELOPPEMENT*/
+    .recherche-developpement img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*PROJETS (images côte à côte)*/
+    .projets-images,
+    .sante-image,
+    .evacuation-image{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projets-images img,
+    .sante-image img,
+    .evacuation-image img{
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    /*CARROUSEL ACTUALITÉS*/
+    .carousel-wrapper{
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .slide-caption h3{
+        font-size: 18px;
+    }
+
+    .slide-caption p{
+        font-size: 13px;
+    }
+
+    /*CARTES ACTUALITÉS (si tu gardes aussi l'ancienne version en liste)*/
+    .news-card{
+        flex-direction: column;
+    }
+
+    .news-card img{
+        width: 100%;
+        height: auto;
+    }
+
+    /*FOOTER*/
+    footer{
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+
 }
 
 
