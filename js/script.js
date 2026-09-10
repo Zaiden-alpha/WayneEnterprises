@@ -1,8 +1,14 @@
 const track = document.getElementById('carouselTrack');
 const dotsContainer = document.getElementById('carouselDots');
 const totalSlides = 7;
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('nav > ul');
 let currentIndex = 0;
 let autoplayTimer;
+
+navToggle.addEventListener('click', () =>{
+    navMenu.classList.toggle('open');
+});
 
 //Génère les points cliquables automatiquement
 

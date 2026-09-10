@@ -53,6 +53,15 @@ nav > ul{
     position: relative;
 }
 
+/*Bouton burger - cacher par défaut (desktop)*/
+.nav-toggle{
+    display: none;
+    background: none;
+    border: none;
+    color: #00Bfff;
+    font-size: 30px;
+    cursor: pointer;
+}
 /*Sidebar colone sur le coté*/
 .main-layout{
     display: flex;
@@ -490,9 +499,18 @@ footer{
 @media (max-width: 768px) {
 
     /*NAVIGATION*/
+    .nav-toggle{
+        display: block;
+    }
+
     nav > ul{
+        display: none;
         flex-direction: column;
         gap: 10px;
+    }
+
+    nav > ul.open{
+        display: flex;
     }
 
     .dropdown ul{
