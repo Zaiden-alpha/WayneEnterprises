@@ -581,6 +581,17 @@ footer{
         max-width: 400px;
     }
 
+    .fiche-images{
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .fiche-images img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    }
+
     /*CARROUSEL ACTUALITÉS*/
     .carousel-wrapper{
         max-width: 100%;
