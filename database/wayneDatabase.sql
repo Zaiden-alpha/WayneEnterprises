@@ -158,3 +158,132 @@ GO
 
 SELECT * FROM Clients;
 GO
+
+CREATE TABLE Allies (
+	Id INT IDENTITY (1,1) PRIMARY KEY, 
+	Alias NVARCHAR(100) NOT NULL UNIQUE,
+	NomReel NVARCHAR(100) NULL,
+	Role NVARCHAR(100) NULL,
+	NiveauAcces INT NOT NULL DEFAULT 1,
+	Actif BIT NOT NULL DEFAULT 1
+);
+GO
+
+SELECT * FROM Clients;
+SELECT * FROM Produits;
+
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Produits';
+GO
+
+
+ALTER TABLE Produits
+ADD ProjetId INT NULL
+    CONSTRAINT FK_Produits_Projets FOREIGN KEY REFERENCES Projets(Id);
+GO
+
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Produits';
+GO
+
+UPDATE p
+SET p.ProjetId = pr.Id
+FROM Produits p
+JOIN Projets pr ON pr.Nom LIKE p.Nom + N'%';
+GO
+
+SELECT p.Id, p.Nom AS Produit, pr.Nom AS Projet
+FROM Produits p
+LEFT JOIN Projets pr ON pr.Id = p.ProjetId;
+GO
+
+UPDATE Produits
+SET ProjetId = (SELECT Id FROM Projets WHERE Nom = N'Beacon-Compact')
+WHERE Nom = N'Beacon compact';
+GO
+
+SELECT p.Id, p.Nom AS Produit, pr.Nom AS Projet
+FROM Produits p
+LEFT JOIN Projets pr ON pr.Id = p.ProjetId;
+GO
+
+UPDATE p
+SET p.DivisionId = pr.DivisionId
+FROM Produits p
+JOIN Projets pr ON pr.Id = p.ProjetId;
+GO
+
+SELECT p.Nom AS Produit, pr.Nom AS Projet, p.DivisionId AS DivisionProduit, pr.DivisionId AS DivisionProjet
+FROM Produits p
+JOIN Projets pr ON pr.Id = p.ProjetId;
+GO
+
+UPDATE Produits SET Prix = 6500.00 WHERE Nom = N'Aegis';
+GO
+
+UPDATE Produits SET Description = RTRIM(Description);
+GO
+
+SELECT Nom, Prix, LEN(Description) AS Longueur, Description
+FROM Produits
+WHERE Nom IN (N'Aegis', N'Secours S-18', N'Evacuation S-18');
+GO
+
+ALTER TABLE Divisions ADD Slug NVARCHAR(50) NULL;
+GO
+
+UPDATE Divisions SET Slug = N'aerospace' WHERE Nom = N'Aerospace';
+UPDATE Divisions SET Slug = N'biotech'   WHERE Nom = N'Biotech';
+UPDATE Divisions SET Slug = N'civiltech' WHERE Nom = N'Civiltech';
+UPDATE Divisions SET Slug = N'mobility'  WHERE Nom = N'Mobility';
+UPDATE Divisions SET Slug = N'securelink' WHERE Nom = N'Seculink';
+GO
+
+SELECT Id, Nom, Slug FROM Divisions;
+GO
+
+ALTER TABLE Projets ADD Slug NVARCHAR(100) NULL;
+GO
+
+UPDATE Projets SET Slug = N'falcon-g-01'     WHERE Nom = N'Falcon G-01';
+UPDATE Projets SET Slug = N'exo-tissu'       WHERE Nom = N'Exo-Tissus';
+UPDATE Projets SET Slug = N'aegis-17'        WHERE Nom = N'Aegis-17';
+UPDATE Projets SET Slug = N'aeromat-a-01'    WHERE Nom = N'Aeromat-A-01';
+UPDATE Projets SET Slug = N'hexa-c6-412'     WHERE Nom = N'Hexa-C6-412';
+UPDATE Projets SET Slug = N'warden'          WHERE Nom = N'Warden';
+UPDATE Projets SET Slug = N'jet-wt'          WHERE Nom = N'Jet WT';
+UPDATE Projets SET Slug = N'stride'          WHERE Nom = N'Stride';
+UPDATE Projets SET Slug = N'laptop'          WHERE Nom = N'Laptop';
+UPDATE Projets SET Slug = N'beacon'          WHERE Nom = N'Beacon-Compact';
+UPDATE Projets SET Slug = N'nest'            WHERE Nom = N'Nest';
+UPDATE Projets SET Slug = N'viper'           WHERE Nom = N'Viper';
+UPDATE Projets SET Slug = N'metro'           WHERE Nom = N'Métro';
+UPDATE Projets SET Slug = N'secours-s-18'    WHERE Nom = N'Secours S-18';
+UPDATE Projets SET Slug = N'evacuation-s-18' WHERE Nom = N'Evacuation S-18';
+GO
+
+SELECT Nom, Slug FROM Projets WHERE Slug IS NULL;
+GO
+
+ALTER TABLE Divisions ALTER COLUMN Slug NVARCHAR(50) NOT NULL;
+ALTER TABLE Divisions ADD CONSTRAINT UQ_Divisions_Slug UNIQUE (Slug);
+GO
+
+ALTER TABLE Projets ALTER COLUMN Slug NVARCHAR(100) NOT NULL;
+ALTER TABLE Projets ADD CONSTRAINT UQ_Projets_Slug UNIQUE (Slug);
+GO
+
+SELECT name FROM sys.key_constraints WHERE name LIKE 'UQ_%Slug';
+GO
+
+SELECT DISTINCT Statut FROM Projets;
+GO
+
+ALTER TABLE Projets ADD CONSTRAINT CK_Projets_Statut
+    CHECK (Statut IN (N'En cours', N'Terminé', N'Phase expérimentale', N'A venir'));
+GO
+
+UPDATE Projets SET Statut = N'Nimporte quoi' WHERE Nom = N'Nest';
+GO
