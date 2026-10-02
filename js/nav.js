@@ -6,3 +6,12 @@ navToggle.addEventListener('click', () =>{
     navMenu.classList.toggle('open');
 });
 
+const here = window.location.pathname.endsWith('/')
+    ? window.location.pathname + 'index.html'
+    : window.location.pathname;
+
+document.querySelectorAll('nav a').forEach(link => {
+    if (link.pathname === here) {
+        link.setAttribute('aria-current', 'page');
+    }
+});

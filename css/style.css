@@ -32,6 +32,11 @@ nav > ul{
 
 }
 
+nav a[aria-current="page"] {
+    font-weight: bold;
+    border-bottom: 3px solid #FFD54F;
+}
+
 /* Ouvrir aussi au clavier, pas seulement à la souris */
 .dropdown:hover ul,
 .dropdown:focus-within ul {
@@ -89,6 +94,8 @@ nav > ul > li > a {
     color: #FFFFFF;
     font: inherit;
     cursor: pointer;
+    font-size: inherit;
+    font-family: inherit
 }
 
 /*Sidebar colone sur le coté*/
