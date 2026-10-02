@@ -2,6 +2,24 @@ body{
     background-color: black;
     color: white;
 }
+
+/*Link menu principal invisible*/
+.skip-link {
+    position: absolute;
+    top: -100px;          /* hors de l'écran */
+    left: 10px;
+    padding: 10px 16px;
+    background: #FFD54F;
+    color: #000000;       /* noir sur jaune : contraste ~14:1 */
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 0;               /* apparaît quand on tabule dessus */
+}
 /*STATUT-BANNER*/
 
 .top-banner{
