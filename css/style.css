@@ -32,8 +32,14 @@ nav > ul{
 
 }
 
+/* Ouvrir aussi au clavier, pas seulement à la souris */
+.dropdown:hover ul,
+.dropdown:focus-within ul {
+    display: block;
+}
+
 .dropdown a:visited{
-    color: green;
+    color: #C3A6FF;
 }
 
 .dropdown a{
@@ -41,7 +47,7 @@ nav > ul{
 }
 
 .dropdown a:hover{
-    color: red;
+    color: #FFD54F;
 }
 
 .dropdown:hover ul{
@@ -53,6 +59,15 @@ nav > ul{
     position: relative;
 }
 
+
+
+nav a:focus-visible,
+.dropdown-toggle:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid #FFD54F;
+    outline-offset: 2px;
+}
+
 /*Bouton burger - cacher par défaut (desktop)*/
 .nav-toggle{
     display: none;
@@ -62,6 +77,20 @@ nav > ul{
     font-size: 30px;
     cursor: pointer;
 }
+
+nav > ul > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font: inherit;
+    cursor: pointer;
+}
+
 /*Sidebar colone sur le coté*/
 .main-layout{
     display: flex;
