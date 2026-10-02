@@ -65,7 +65,6 @@ nav a[aria-current="page"] {
 }
 
 
-
 nav a:focus-visible,
 .dropdown-toggle:focus-visible,
 .nav-toggle:focus-visible {
@@ -531,6 +530,24 @@ footer{
     gap: 30px ;
 }
 
+footer a {
+    color: #00BFFF;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #C3A6FF;
+}
+
+footer a:hover,
+footer a:focus-visible {
+    color: #FFD54F;
+}
+
+footer a:focus-visible {
+    outline: 3px solid #FFD54F;
+    outline-offset: 2px;
+}
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
 
